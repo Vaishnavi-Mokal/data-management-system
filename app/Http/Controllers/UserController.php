@@ -139,7 +139,7 @@ class UserController extends Controller
         $validateData=$request->validate([
             'firstname'=>'required',
             'lastname'=>'required',
-            'email'=>'required|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix|unique:users,email'
+            'email'=>'required|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix'
         ],[
             'firstname.required'=>'FirstName is Required',
             'lastname.required'=>'LastName  is Required',
